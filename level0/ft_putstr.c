@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   first_word.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: albben-a <albben-a@student.42madrid.c      +#+  +:+       +#+        */
+/*   By: albben-a <albben-a@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/12 15:27:14 by albben-a          #+#    #+#             */
-/*   Updated: 2026/03/17 16:02:19 by albben-a         ###   ########.fr       */
+/*   Created: 2026/03/17 16:04:08 by albben-a          #+#    #+#             */
+/*   Updated: 2026/03/17 16:07:16 by albben-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_first_word(char *s)
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	while (s[i] == ' ' || s[i] == '\t')
-		i++;
-	while (s[i] != ' ' && s[i] != '\t')
+	while (str[i])
 	{
-		write(1, &s[i], 1);
+		write(1, &str[i], 1);
 		i++;
 	}
-	write(1, "\n", 1);
 }
-
-int	main(int argc, char **argv)
+/*
+int	main(void)
 {
-	if (argc != 2)
-		write(1, "\n", 1);
-	else
-		ft_first_word(argv[1]);
+	char	str[] = "hola que tal";
+
+	ft_putstr(str);
 	return (0);
-}
+}*/
