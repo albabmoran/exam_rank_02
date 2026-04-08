@@ -13,7 +13,7 @@ These exercises focus on:
 - Memory management  
 - Algorithmic thinking under time constraints  
 
-The code is written to match the **exam environment**, where the priority is correctness, efficiency, and speed rather than strict adherence to the 42 Norm.
+The code is written to match the **exam environment**, where strict adherence to the 42 Norm is not a priority.
 
 ---
 
@@ -38,7 +38,7 @@ cc -Wall -Wextra -Werror
 Example:
 
 ```sh
-cc exercice.c
+cc -Wall -Wextra -Werror exercice.c
 ./a.out
 ```
 
